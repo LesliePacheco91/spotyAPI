@@ -18,8 +18,8 @@ const swaggerDefinition = {
             url: "http://localhost:3001/api"
         },
         {
-            url: "http://localhost:3000/api"
-        }
+            url: "https://stark-sea-43598-52d86e080b07.herokuapp.com/api"
+        },
     ],
     components:{
         securitySchemes:{
@@ -75,13 +75,12 @@ const swaggerDefinition = {
                 },
             },
             storage:{
-                 type:"object",
+                type:"object",
                 required: ["url", "filename"],
                 properties:{
-                     url:{type:"string"},
+                    url:{type:"string"},
                     filename:{type:"string"},
                 }
-               
             }
 
         },

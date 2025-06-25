@@ -7,8 +7,10 @@ const openApiConfiguration  = require('./docs/swaggwer');
 const dbConnectNosql = require('./config/mongo');
 const { config } = require("dotenv");
 const {dbConectMysql} = require("./config/mysql")
-app.use(express.json()); // para enviar datos mediante json en postman
 
+app.use(cors()); // esto va servir cuando vayas a desplegar tu api
+app.use(express.json()); // para enviar datos mediante json en postman
+app.use(express.static("storage")); 
 const ENGINE_DB = process.env.ENGINE_DB;
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
